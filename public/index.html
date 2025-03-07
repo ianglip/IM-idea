@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Messaging App</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login Screen -->
+    <div id="login-screen">
+      <h1>Instant Messaging App</h1>
+      <div class="login-form">
+        <input type="text" id="username-input" placeholder="Enter your username">
+        <button id="join-btn">Join Chat</button>
+      </div>
+    </div>
+
+    <!-- Chat Screen (hidden initially) -->
+    <div id="chat-screen" class="hidden">
+      <div class="chat-header">
+        <h2>Chat Room</h2>
+        <span id="online-status"></span>
+      </div>
+      
+      <div class="chat-container">
+        <!-- User List Sidebar -->
+        <div class="user-list">
+          <h3>Online Users</h3>
+          <ul id="users"></ul>
+        </div>
+        
+        <!-- Chat Messages Area -->
+        <div class="chat-messages-container">
+          <div id="chat-messages"></div>
+          <div id="typing-indicator"></div>
+          <div class="message-input">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/client.js"></script>
+</body>
+</html>
